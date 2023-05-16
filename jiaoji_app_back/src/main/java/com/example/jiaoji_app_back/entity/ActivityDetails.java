@@ -25,13 +25,14 @@ public class ActivityDetails {
     private String grade;
     private String club;
     private Long recruitmentNumber;
+    private Long remainingNumber;
     private String organizer;
     private Long suScore;
     private Long laborHour;
     private String status;
     private String comments;
 
-    public ActivityDetails(Long id, String name, String content, String location, String signupTime, String activityTime, String departments, String signupRestriction, String college, String grade, String club, Long recruitmentNumber, String organizer, Long suScore, Long laborHour, String status, String comments) {
+    public ActivityDetails(Long id, String name, String content, String location, String signupTime, String activityTime, String departments, String signupRestriction, String college, String grade, String club, Long recruitmentNumber, Long remainingNumber,String organizer, Long suScore, Long laborHour, String status, String comments) {
         this.id = id;
         this.name = name;
         this.content = content;
@@ -44,6 +45,7 @@ public class ActivityDetails {
         this.grade = grade;
         this.club = club;
         this.recruitmentNumber = recruitmentNumber;
+        this.remainingNumber = remainingNumber;
         this.organizer = organizer;
         this.suScore = suScore;
         this.laborHour = laborHour;

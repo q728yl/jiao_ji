@@ -12,4 +12,8 @@ public interface ActivityDao {
         ActivityDetails changeStatus(Long id, String status, String comments);
 
         ActivityDetails handleSignup(Long userId, Long activityId);
+
+        ActivityDetails getPassedActivityByAId(Long activityId);
+
+        void updateActivityRemainingNumber(Long activityId,Long remainingNumber);
 }

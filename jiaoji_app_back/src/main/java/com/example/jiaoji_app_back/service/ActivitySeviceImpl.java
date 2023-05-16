@@ -49,5 +49,22 @@ public class ActivitySeviceImpl implements ActivityService {
                 return new Message("报名失败",false,null);
             }
         }
+        @Override
+        public ActivityDetails getPassedActivitiesByAId(Long activityId){
+            ActivityDetails activityDetails= activityDao.getPassedActivityByAId(activityId);
+//            if(activityDetails!= null){
+//                return new Message("报名成功",true,activityDetails);
+//            }else{
+//                return new Message("报名失败",false,null);
+//            }
+            return activityDetails;
+        }
+        @Override
+    public Message updateActivityRemainingNumber(Long l,Long remainingNumber){
+            activityDao.updateActivityRemainingNumber(l,remainingNumber);
+
+            return new Message("报名成功",true,null);
+
+        }
     }
 

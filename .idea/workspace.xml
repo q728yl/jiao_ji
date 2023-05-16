@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5901abce-3730-4a2c-8ba5-945d9777eeda" name="变更" comment="" />
+    <list default="true" id="5901abce-3730-4a2c-8ba5-945d9777eeda" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a5595f38-a862-4673-8b81-c432530123f6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a5595f38-a862-4673-8b81-c432530123f6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/ActivityDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/ActivityDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/ActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/ActivityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/ActivityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/daoimpl/ActivityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/entity/ActivityDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/entity/ActivityDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivitySeviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivitySeviceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,13 +44,25 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.9.1-bin/apache-maven-3.9.1" />
         <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.9.1-bin\apache-maven-3.9.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -33,29 +71,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJProject/jiaoji_app_back&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;0b009661c9b26ec7f46afec779ff75b3&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/IJProject/jiaoji_app_back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "0b009661c9b26ec7f46afec779ff75b3",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IJProject\jiaoji_app_back\jiaoji_app_back\src\main\java\com\example\jiaoji_app_back\controller" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.JiaojiAppBackApplication">
     <configuration name="JiaoJiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="jiaoji_app_back" />
@@ -71,6 +123,96 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jiaoji_app_back" />
+      <option name="SPRING_BOOT_MAIN_CLASS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tomcat10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="f6caffff-4129-48ff-aa77-7dfcd01c01e7" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50451" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.JiaojiAppBackApplication" />
+      <item itemvalue="Spring Boot.JiaoJiApplication" />
+      <item itemvalue="Tomcat 服务器.tomcat10.1.7" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,6 +226,16 @@
       <workItem from="1683957072967" duration="174000" />
       <workItem from="1683979215751" duration="12752000" />
       <workItem from="1684034887600" duration="7442000" />
+      <workItem from="1684077370909" duration="765000" />
+      <workItem from="1684081089275" duration="1687000" />
+      <workItem from="1684117124899" duration="4878000" />
+      <workItem from="1684127636500" duration="12924000" />
+      <workItem from="1684204689912" duration="1729000" />
+      <workItem from="1684206489277" duration="677000" />
+      <workItem from="1684207194263" duration="1181000" />
+      <workItem from="1684216987153" duration="737000" />
+      <workItem from="1684217749681" duration="6084000" />
+      <workItem from="1684225040101" duration="3851000" />
     </task>
     <servers />
   </component>

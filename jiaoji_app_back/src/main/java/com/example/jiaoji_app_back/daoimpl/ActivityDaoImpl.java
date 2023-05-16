@@ -1,5 +1,6 @@
-package com.example.jiaoji_app_back.dao;
+package com.example.jiaoji_app_back.daoimpl;
 
+import com.example.jiaoji_app_back.dao.ActivityDao;
 import com.example.jiaoji_app_back.entity.ActivityDetails;
 import com.example.jiaoji_app_back.repository.ActivityDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,14 @@ public class ActivityDaoImpl implements ActivityDao {
     @Override
     public  ActivityDetails handleSignup(Long userId, Long activityId){
         return activityDetailsRepository.handleSignup(userId,activityId);
+    }
+    @Override
+    public ActivityDetails getPassedActivityByAId(Long activityId){
+        return activityDetailsRepository.getPassedActivityById(activityId);
+    }
+    @Override
+    public  void updateActivityRemainingNumber(Long activityId,Long remainingNumber){
+      activityDetailsRepository.updateActivityRemainingNumber(activityId,remainingNumber);
     }
 
 }
