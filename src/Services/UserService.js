@@ -7,7 +7,7 @@ import {useNavigate}  from "react-router-dom";
 // import { navigate } from 'gatsby-link';
 
 export const login = async (data) => {
-  const url = ` http://localhost:8003/login`;
+  const url = ` /api/login`;
   const callback = (data) => {
     if (data.status >= 0) {
       localStorage.setItem("user", JSON.stringify(data.data));

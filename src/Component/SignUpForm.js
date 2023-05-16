@@ -144,41 +144,49 @@ const tailLayout = {
     },
 };
 
-const SignUpForm = () => {
-    function handleConfirmSignUp() {
-        const requestData = {
-            userId: 1,
-            activityId: 3,
-            club: 'zuqiu',
-            college: '外国语学院'
+
+
+    const SignUpForm = ({ ActivityId }) => {
+        const handleConfirmSignUp = (formData) => {
+            console.log(ActivityId);
+            const requestData = {
+                userId: 1,
+                activityId: ActivityId,
+                ...formData,
+            };
+            console.log(requestData);
+
+            // 发送请求等其他逻辑...
+            fetch('/api/handleSignup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        // 处理报名成功的逻辑
+                        console.log(data.msg);
+                        console.log(data.data);
+                        alert("报名表单已提交，报名成功！")
+                    } else {
+                        // 处理报名失败的逻辑
+                        console.error(data.msg);
+                        alert(data.msg)
+                    }
+                })
+                .catch(error => {
+                    // 处理错误信息
+                    console.error(error);
+                });
+
         };
 
-        fetch('/api/handleSignup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(requestData)
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    // 处理报名成功的逻辑
-                    console.log(data.msg);
-                    console.log(data.data);
-                    alert("报名表单已提交，报名成功！")
-                } else {
-                    // 处理报名失败的逻辑
-                    console.error(data.msg);
-                    alert(data.msg)
-                }
-            })
-            .catch(error => {
-                // 处理错误信息
-                console.error(error);
-            });
 
-    }
+
+
 
     return (
         <div className="card-container">
@@ -187,7 +195,7 @@ const SignUpForm = () => {
                     <h2 className="ant-card-head-title">填写报名信息</h2>
                 </div>
                 <div className="ant-card-body">
-                    <Form {...layout} name="basic" >
+                    <Form {...layout} name="basic" onFinish={handleConfirmSignUp}>
                         <Form.Item
                             label="姓名"
                             name="name"
@@ -216,11 +224,35 @@ const SignUpForm = () => {
 
                         <Form.Item
                             label="学院"
-                            name="department"
+                            name="college"
                             rules={[
                                 {
                                     required: true,
                                     message: "请输入学院！",
+                                },
+                            ]}
+                        >
+                            <Input />
+                        </Form.Item>
+                        <Form.Item
+                            label="年级"
+                            name="grade"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: "请输入年级！",
+                                },
+                            ]}
+                        >
+                            <Input />
+                        </Form.Item>
+                        <Form.Item
+                            label="社团"
+                            name="club"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: "请输入所属社团！",
                                 },
                             ]}
                         >
@@ -242,7 +274,7 @@ const SignUpForm = () => {
 
                         <Form.Item
                             label="邮箱"
-                            name="email"
+                            name="mail"
                             rules={[
                                 {
                                     type: "email",
@@ -260,7 +292,7 @@ const SignUpForm = () => {
                         <Form.Item {...tailLayout}>
                             <Row gutter={16}>
                                 <Col span={12}>
-                                    <Button type="primary" onClick={handleConfirmSignUp}>
+                                    <Button type="primary" htmlType="submit">
                                         确认报名
                                     </Button>
                                 </Col>
