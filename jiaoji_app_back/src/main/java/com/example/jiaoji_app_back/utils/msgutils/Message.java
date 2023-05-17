@@ -1,4 +1,4 @@
-package com.example.jiaoji_app_back.model;
+package com.example.jiaoji_app_back.utils.msgutils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

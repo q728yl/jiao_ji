@@ -19,9 +19,9 @@ import java.util.Map;
 
 public class MomentController {
     @PostMapping
-    @CrossOrigin(origins = "http://localhost:3000")
+//    @CrossOrigin(origins = "http://localhost:3000")
     @RequestMapping("/uploadphoto")
-    @ResponseStatus(HttpStatus.OK)
+//    @ResponseStatus(HttpStatus.OK)
     public String post(@RequestBody List<File> fileList) {
         // 处理上传的文件
         System.out.println(fileList);

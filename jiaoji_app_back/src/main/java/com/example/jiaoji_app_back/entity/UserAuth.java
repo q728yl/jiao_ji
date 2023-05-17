@@ -3,32 +3,32 @@ package com.example.jiaoji_app_back.entity;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
-import org.springframework.data.annotation.Transient;
-
-
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 
 
 @Entity
+@Data
 @Table(name = "userauth")
 @JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "userId")
 public class UserAuth {
-    @Column(name = "userId")
+
     @Id
+    @Column(name = "user_id")
     private Integer userId;
 
-@Column(name = "username")
+    @Column(name = "username")
     private String username;
+
     @Column(name = "password")
-    @Transient
     private String password;
-    @Column(name = "userType")
+
+    @Column(name="user_type")
     private Integer userType;
 
     public Integer getUserId() {

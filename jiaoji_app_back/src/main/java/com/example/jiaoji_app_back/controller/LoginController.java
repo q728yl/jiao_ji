@@ -1,6 +1,7 @@
 package com.example.jiaoji_app_back.controller;
 
 import com.example.jiaoji_app_back.constant.Constant;
+import com.example.jiaoji_app_back.entity.User;
 import com.example.jiaoji_app_back.entity.UserAuth;
 import com.example.jiaoji_app_back.service.UserService;
 import com.example.jiaoji_app_back.utils.msgutils.Msg;
@@ -8,19 +9,17 @@ import com.example.jiaoji_app_back.utils.msgutils.MsgCode;
 import com.example.jiaoji_app_back.utils.msgutils.MsgUtil;
 import com.example.jiaoji_app_back.utils.sessionutils.SessionUtil;
 import net.sf.json.JSONObject;
-import org.apache.tomcat.util.bcel.Const;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-
-import java.util.List;
 import java.util.Map;
 
-
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
-@ResponseStatus(HttpStatus.OK)
+//@CrossOrigin(origins = "http://localhost:3000")
+//@ResponseStatus(HttpStatus.OK)
 public class LoginController {
 
     @Autowired
@@ -28,22 +27,33 @@ public class LoginController {
 
     @PostMapping
     @RequestMapping("/login")
-    @ResponseStatus(HttpStatus.OK)
+//    @ResponseStatus(HttpStatus.OK)
     //public Msg login(@RequestParam(Constant.USERNAME) String username, @RequestParam(Constant.PASSWORD) String password, @RequestParam(Constant.REMEMBER_ME) Boolean remember){
     public Msg login(@RequestBody Map<String, String> params){
         String username = params.get(Constant.USERNAME);
         String password = params.get(Constant.PASSWORD);
         UserAuth auth = userService.checkUser(username, password);
+
         if(auth != null){
+            User user = userService.getUserByUserId(auth.getUserId());
 
             JSONObject obj = new JSONObject();
             obj.put(Constant.USER_ID, auth.getUserId());
             obj.put(Constant.USERNAME, auth.getUsername());
             obj.put(Constant.USER_TYPE, auth.getUserType());
-//            SessionUtil.setSession(obj);
+            obj.put(Constant.AVATAR, user.getAvatar());
+            obj.put(Constant.NICKNAME, user.getNickname());
+            obj.put(Constant.GENDER, user.getGender());
+            obj.put(Constant.EMAIL, user.getMail());
+            obj.put(Constant.PHONE, user.getTel());
+            obj.put(Constant.COLLEGE, user.getCollege());
+            obj.put(Constant.STU_ID, user.getStudentId());
+            obj.put(Constant.CLUB, user.getClub());
+            obj.put(Constant.GRADE, user.getGrade());
 
-            JSONObject data = JSONObject.fromObject(auth);
-            data.remove(Constant.PASSWORD);
+
+
+            JSONObject data = JSONObject.fromObject(obj);
 
             return MsgUtil.makeMsg(MsgCode.SUCCESS, MsgUtil.LOGIN_SUCCESS_MSG, data);
         }

@@ -2,7 +2,6 @@
   <library name="Maven: ch.qos.logback:logback-classic:1.4.7">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.4.7/logback-classic-1.4.7.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../apache-tomcat-10.1.7-windows-x64/apache-tomcat-10.1.7/lib/servlet-api.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.4.7/logback-classic-1.4.7-javadoc.jar!/" />

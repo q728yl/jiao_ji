@@ -8,42 +8,50 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import lombok.Data;
+import java.util.Objects;
 
-@Data
 @Entity
 @Table(name = "user")
-@JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
 public class User {
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @Column(name = "userId")
     private int userId;
+    @Basic
+    @Column(name = "nickname")
     private String nickname;
+    @Basic
+    @Column(name = "username")
     private String username;
-    private Integer gender;//0男，1女
+    @Basic
+    @Column(name = "gender")
+    private Integer gender;
+    @Basic
+    @Column(name = "tel")
     private String tel;
+    @Basic
+    @Column(name = "avatar")
     private String avatar;
-    private String college;//学院
-    private String studentId;//学号
+    @Basic
+    @Column(name = "college")
+    private String college;
+    @Basic
+    @Column(name = "studentId")
+    private String studentId;
+    @Basic
+    @Column(name = "club")
     private String club;
+    @Basic
+    @Column(name = "mail")
     private String mail;
-
-    public User(int userId, String nickname, String username, Integer gender, String tel, String avatar, String college, String studentId, String club, String mail) {
-        this.userId = userId;
-        this.nickname = nickname;
-        this.username = username;
-        this.gender = gender;
-        this.tel = tel;
-        this.avatar = avatar;
-        this.college = college;
-        this.studentId = studentId;
-        this.club = club;
-        this.mail = mail;
-    }
-
-    public User() {
-
-    }
+    @Basic
+    @Column(name = "grade")
+    private Integer grade;
 
     public int getUserId() {
         return userId;
@@ -123,5 +131,26 @@ public class User {
 
     public void setMail(String mail) {
         this.mail = mail;
+    }
+
+    public Integer getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Integer grade) {
+        this.grade = grade;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return userId == user.userId && Objects.equals(nickname, user.nickname) && Objects.equals(username, user.username) && Objects.equals(gender, user.gender) && Objects.equals(tel, user.tel) && Objects.equals(avatar, user.avatar) && Objects.equals(college, user.college) && Objects.equals(studentId, user.studentId) && Objects.equals(club, user.club) && Objects.equals(mail, user.mail) && Objects.equals(grade, user.grade);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(userId, nickname, username, gender, tel, avatar, college, studentId, club, mail, grade);
     }
 }
