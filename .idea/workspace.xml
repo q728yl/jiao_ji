@@ -5,31 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5901abce-3730-4a2c-8ba5-945d9777eeda" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a5595f38-a862-4673-8b81-c432530123f6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a5595f38-a862-4673-8b81-c432530123f6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_4_7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/JiaojiAppBackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/JiaojiAppBackApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/ActivityDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/ActivityDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/ActivityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/ActivityDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/ActivityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/daoimpl/ActivityDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/daoimpl/ActivityDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/daoimpl/ActivityDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/entity/ActivityDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/entity/ActivityDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/model/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/repository/ActivityDetailsRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivityService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivitySeviceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/java/com/example/jiaoji_app_back/service/ActivitySeviceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiaoji_app_back/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/jiaoji_app_back/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,15 +77,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/IJProject/jiaoji_app_back",
+    "last_opened_file_path": "D:/apache-tomcat-10.1.7-windows-x64/apache-tomcat-10.1.7/lib/servlet-api.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "库",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "全局库",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "MavenSettings",
     "spring.configuration.checksum": "0b009661c9b26ec7f46afec779ff75b3",
     "vue.rearranger.settings.migration": "true"
   },
@@ -236,6 +228,9 @@
       <workItem from="1684216987153" duration="737000" />
       <workItem from="1684217749681" duration="6084000" />
       <workItem from="1684225040101" duration="3851000" />
+      <workItem from="1684252874535" duration="13000" />
+      <workItem from="1684300279746" duration="20000" />
+      <workItem from="1684300313802" duration="3005000" />
     </task>
     <servers />
   </component>
