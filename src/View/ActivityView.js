@@ -1,9 +1,12 @@
 import React from "react";
-import ActivityList from "../Component/ActivityList";
+import ActivityList from "../Component/Activity/ActivityList";
 import Search from "antd/es/input/Search";
 
-const ActivityView: React.FC = () => {
+const ActivityView  = () => {
 
+    const handleSearch = (value) => {
+        console.log(value);
+    };
     return (
         <div>
             <Search
@@ -11,6 +14,7 @@ const ActivityView: React.FC = () => {
                 allowClear
                 enterButton="Search"
                 size="large"
+                onSearch={handleSearch}
                 style={{ width: 500, height: 60, margin: "20px auto" }}
             />
             <ActivityList />

@@ -4,32 +4,32 @@ import AdminHomeView from "./Admin/AdminHomeView";
 
 
 const BasicView = () => {
-    // const user = getUser();
-    // console.log(user)
-    // if(user == null ){
-    //    return (
-    //        <div >
-    //            <HomeView/>
-    //        </div>
-    //    )
-    // }
-    // if(user.userType === 0) {
-    //     return (
-    //         <div>
-    //             <HomeView />
-    //         </div>
-    //     )
-    // }
-    // return (
-    //     <div>
-    //         <AdminHomeView/>
-    //     </div>
-    // )
+    const user = getUser();
+    console.log(user)
+    if(user == null ){
+       return (
+           <div >
+               <HomeView/>
+           </div>
+       )
+    }
+    if(user.userType === 0) {
+        return (
+            <div>
+                <HomeView />
+            </div>
+        )
+    }
     return (
         <div>
-            <HomeView/>
+            <AdminHomeView/>
         </div>
     )
+    // return (
+    //     <div>
+    //         <HomeView/>
+    //     </div>
+    // )
 }
 
 export default BasicView;

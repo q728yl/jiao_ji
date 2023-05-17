@@ -1,5 +1,9 @@
 import { message } from "antd";
 
+/*
+* 发送FormData对象
+* eg：表单数据、文件上传
+* */
 let postRequest_v2 = (url, data, callback) => {
   var formData = new FormData();
 
@@ -35,6 +39,9 @@ let postRequest_v2 = (url, data, callback) => {
     });
 };
 
+/*
+* 传JSON对象
+* */
 let postRequest = (url, json, callback) => {
   let opts = {
     method: "POST",
@@ -52,7 +59,8 @@ let postRequest = (url, json, callback) => {
       return response.json();
     })
     .then((data) => {
-      return callback(data);
+      if(callback !== null)
+          return callback(data);
     })
     .catch((error) => {
       console.log(error);

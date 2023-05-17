@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {Card, Button, Modal, Input, Radio} from "antd";
 import { useState,setState } from "react";
 import { changeStatus } from "../../Services/ActivitySevice";
+import { useNavigate } from "react-router-dom";
 
 /**
  * 管理者单个活动视图
@@ -60,28 +61,17 @@ const ManageActivityView = ({ activity }) => {
             劳动学时：{activity.laborHour}
         </div>,
     };
-    // useEffect(() => {
-    //     changeStatus(activity.id, activity.status, activity.comments, (data, error) => {
-    //             if (error) {
-    //                 // 如果出现错误，显示错误信息
-    //                 console.error(error);
-    //             } else {
-    //                 // 如果成功获取数据，更新活动列表
-    //                 console.log(data);
-    //             }
-    //         }
-    //     );
-    // }, [activity.comments, activity.id, activity.status]);
+
     const handleClick = (activity) => {
         Modal.confirm({
             title: '审核意见',
             content:<div>
                 <Radio.Group
                     onChange={(e) => {activity.status = e.target.value;}}
-                    defaultValue={'pass'}
+                    defaultValue={'PASS'}
                 >
-                    <Radio value={'pass'}>通过</Radio>
-                    <Radio value={'rejected'}>驳回</Radio>
+                    <Radio value={'PASS'}>通过</Radio>
+                    <Radio value={'REJECTED'}>驳回</Radio>
                 </Radio.Group>
                 <br/>
                 <Input
@@ -97,22 +87,8 @@ const ManageActivityView = ({ activity }) => {
             closable: true,
             icon: null,
             onOk: () => {
-                activity.status === 'todo' ? activity.status = 'pass' : activity.status = 'rejected';
+                activity.status === 'TODO' ? activity.status = 'PASS' : activity.status = 'REJECTED';
                 console.log(activity.status);
-               // 当前活动状态发到后端
-               //  useEffect(() => {
-               //      changeStatus(activity.id, activity.status, activity.feedback, (data, error) => {
-               //          if (error) {
-               //              // 如果出现错误，显示错误信息
-               //              console.error(error);
-               //          } else {
-               //              // 如果成功获取数据，更新活动列表
-               //              console.log(data);
-               //          }
-               //      }
-               //      );
-               //  }, []);
-
                 fetch('/api/changeStatus', {
                     method: 'POST',
                     headers: {
@@ -139,9 +115,10 @@ const ManageActivityView = ({ activity }) => {
                         // 如果出现错误，将错误信息传递给回调函数
                        console.log(error)
                     });
+                window.location.reload();
             },
             onCancel:() => {
-                activity.status = 'todo';
+                activity.status = 'TODO';
             }
         });
     };
@@ -154,7 +131,7 @@ const ManageActivityView = ({ activity }) => {
                 tabList={tabList}
                 activeTabKey={activeTabKey}
                 onTabChange={onTabChange}
-                tabBarExtraContent={activity.status === 'todo' ?
+                tabBarExtraContent={activity.status === 'TODO' ?
                     <Button type="primary" onClick={() => handleClick(activity)}>
                         审核
                     </Button>

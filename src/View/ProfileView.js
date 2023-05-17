@@ -6,7 +6,7 @@ import DateReminder from "../component/calendar";
 import MyCard from "../component/card";
 import MyHeader from "../component/header";
 import MySider from "../component/sider";
-import MyUserInfo from "../component/MyUserInfo";
+import MyUserInfo from "../Component/UserInfo/MyUserInfo";
 import Notification from "../component/notification";
 
 import "../css/profileView.css";

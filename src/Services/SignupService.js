@@ -1,17 +1,18 @@
 // signupService.js
 
-export function postSignupData(requestData) {
-    return fetch('/api/handleSignup', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(requestData)
-    })
-        .then(response => response.json())
-        .catch(error => {
-            console.error(error);
-            throw new Error('报名请求失败');
-        });
-}
+import {history} from "../utils/history";
+import {message} from "antd";
+import {postRequest} from "../utils/ajax";
 
+export function postSignupData(requestData) {
+    const url = `/api/signup`;
+    const callback = (data) => {
+        if (data.status >= 0) {
+            message.success(data.msg);
+        } else {
+            message.error("请勿重复报名");
+        }
+    };
+    postRequest(url, requestData, callback);
+
+}

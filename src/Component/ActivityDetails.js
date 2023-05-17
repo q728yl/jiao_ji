@@ -1,10 +1,16 @@
 import React from "react";
 import { Card as AntCard } from "antd";
 import "../css/ActivityDetail.css";
+// import { Map, Marker, NavigationControl, InfoWindow } from 'react-bmap';
 
 const ActivityDetails = ({ activity }) => {
     return (
         <div className="card-container">
+            {/*<Map center={{lng: 121.449, lat: 31.029}} zoom="30">*/}
+            {/*    <Marker position={{lng: 121.449, lat:31.029}} />*/}
+            {/*    <InfoWindow position={{lng: 121.449, lat:31.029}} text="软件学院" title="活动地点"/>*/}
+            {/*    <NavigationControl />*/}
+            {/*</Map>*/}
             <AntCard className="activity-card ant-card-hoverable">
                 <div className="ant-card-head">
                     <h2 className="ant-card-head-title">{activity && activity.name}</h2>
