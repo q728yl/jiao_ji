@@ -30,7 +30,9 @@ const ReleaseForm = ({ ActivityId }) => {
         const requestData = {
             "userId":0,
             ...formData,
-            "status":"todo"
+            "status":1,
+            "photo":"jdnxwjdxj"
+
         };
         console.log(requestData);
 
