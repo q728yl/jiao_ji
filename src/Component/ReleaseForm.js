@@ -169,18 +169,18 @@ const ReleaseForm = ({ ActivityId }) => {
                                 >
                                     <Input />
                                 </Form.Item>
-                                <Form.Item
-                                    label="活动报名限制"
-                                    name="signupRestriction"
-                                    rules={[
-                                        {
-                                            required: true,
-                                            message: "请输入活动报名限制！",
-                                        },
-                                    ]}
-                                >
-                                    <Input />
-                                </Form.Item>
+                                {/*<Form.Item*/}
+                                {/*    label="活动报名限制"*/}
+                                {/*    name="signupRestriction"*/}
+                                {/*    rules={[*/}
+                                {/*        {*/}
+                                {/*            required: true,*/}
+                                {/*            message: "请输入活动报名限制！",*/}
+                                {/*        },*/}
+                                {/*    ]}*/}
+                                {/*>*/}
+                                {/*    <Input />*/}
+                                {/*</Form.Item>*/}
                                 <Form.Item
                                     label="报名学院限制"
                                     name="college"

@@ -26,7 +26,8 @@ const ActivityDetail = () => {
             setIsModalOpen(false);
             return;
         }
-        postSignupData({userId: user.userId, activityId: activityId});
+
+        postSignupData(user.userId,activityId);
         setIsModalOpen(false);
     };
     const handleCancel = () => {
