@@ -1,0 +1,145 @@
+
+use jiaoji;
+
+
+SET  FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS `userauth`;
+SET FOREIGN_KEY_CHECKS=1;
+CREATE TABLE userauth (
+                          user_id INT,
+                          username VARCHAR(255),
+                          password VARCHAR(255),
+                          user_type INT,
+                          PRIMARY KEY (user_id)
+);ALTER TABLE userauth ENGINE=InnoDB;
+INSERT INTO userAuth (user_id, username, password, user_type)
+VALUES (0, 'segui', 'bigsegui', 0),
+       (1, 'root', 'root', 1);
+
+
+
+SET  FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE user (
+                      userId INT,
+                      nickname VARCHAR(255),
+                      username VARCHAR(255),
+                      gender INTEGER,
+                      tel VARCHAR(255), #手机
+                      avatar VARCHAR(255), #url
+                      college VARCHAR(255), #学院
+                      studentId VARCHAR(255), #学号
+                      club VARCHAR(255), #社团
+                      mail VARCHAR(255),
+                      grade INTEGER, # 管理员为0
+                      PRIMARY KEY (userId),
+                      CONSTRAINT fk_userauth FOREIGN KEY (userId) REFERENCES userauth(user_id)
+);
+INSERT INTO user (userId, nickname, username,gender,tel, avatar,college,studentId,club,mail,grade)
+VALUES (0, '哈士奇', 'segui','0','11111111111',
+        'https://img1.baidu.com/it/u=42109136,3593469304&fm=253&fmt=auto&app=138&f=PNG?w=500&h=500',
+        '电子信息与电气工程学院','521021000000','电院青志队','hashiqi@sjtu.edu.cn',0),
+       (1, '秋田', 'root', '0','13178914567',
+        'https://www.lizhi.io/wp-content/uploads/2020/03/datagrip.png',
+        '电子信息与电气工程学院','521021910787','电院团委','qiutian@sjtu.edu.cn',2);
+
+
+DROP TABLE IF EXISTS `friendship`;
+
+CREATE TABLE friendship (
+                            user_a INT, #为了避免重复，user_a < user_b
+                            user_b INT,
+                            relation ENUM('WaitForA','WaitForB','Friend','Delete'),
+                            PRIMARY KEY (user_a,user_b), # 用(user_a,user_b)的关系作为唯一标识符
+                            CONSTRAINT fk1_friendship FOREIGN KEY (user_a) REFERENCES user(userId),
+                            CONSTRAINT fk2_friendship FOREIGN KEY (user_b) REFERENCES user(userId)
+);
+
+INSERT INTO friendship (user_a, user_b, relation)
+VALUES (0, 1, 'Friend');
+SET  FOREIGN_KEY_CHECKS=0;
+DROP TABLE IF EXISTS `activity_details`;
+create table activity_details
+(
+    id                int                               not null auto_increment
+        primary key,
+    name              varchar(255)                      null,
+    content           varchar(255)                      null,
+    location          varchar(255)                      null,
+    signupTime        varchar(255)                      null,
+    activityTime      varchar(255)                      null,
+    departments       varchar(255)                      null,
+    signupRestriction varchar(255)                      null,
+    college           varchar(255)                      null,
+    grade             int not                     null,
+    club              varchar(255)                      null,
+    recruitmentNumber int                               null,
+    remainingNumber   int                               null,
+    organizer         varchar(255)                      null,
+    suScore           int                               null,
+    laborHour         int                               null,
+    status            int                               null,# ('NOT_RELEASE', 'TODO','PASS', 'REJECTED','SIGN','PROCESS','OVER')
+    comments          varchar(255)                      null,
+    photo             varchar(255)                      null # url
+);
+INSERT INTO activity_details (id, name, content, location, signupTime, activityTime, departments, signupRestriction, college, grade, club, recruitmentNumber, remainingNumber, organizer, suScore, laborHour, status, comments,photo)
+VALUES
+    (1, '迎新晚会', '欢迎新生入学的庆祝活动，有丰富的文艺表演和抽奖环节。', '学校体育馆', '2023年8月1日 - 2023年8月20日', '2023-05-01', '软件学院', '{"College": ["软件学院"], "Grade": [], "Club": []}', '软件学院', -1, NULL, 100, 100, '学生会', 3, 0, 3, '无','https://images.osogoo.com/article/a7f541f6d15f90ca40/201905181359199419.jpg?x-oss-process=style/wate_design'),
+    (2, '社团招新', '学校社团招新活动，欢迎新生加入各种社团组织。', '学校各社团活动场地', '2023年8月30日 - 2023年9月10日', '2023-05-08', '社联', '{"College": [], "Grade": [], "Club": []}', NULL,-1, NULL, 1000, 1000, '学生会', 2, 0, 3, '无',null),
+    (3, '国庆主题活动', '庆祝国庆节的主题活动，有表演、比赛、摊位等多种形式。', '学校操场', '2023年9月30日 - 2023年10月1日', '2023-09-28', '校级', '{"College": [], "Grade": [], "Club": []}', NULL, -1, NULL, 500, 500, '学生会', 2, 0, 3, '无',null),
+    (4, '英语角', '提供英语学习和交流平台，有外教参与。', '学校英语角', '每周五下午3:00 - 5:00', '2023-05-27', '外国语学院', '{"College": ["外国语学院"], "Grade": [], "Club": []}', '外国语学院', -1, NULL, 50, 50, '外国语学院', 3, 0, 3, '无',null),
+    (5, '拔河比赛', '学院之间的拔河比赛，展现学院实力。', '学校操场', '2023年10月15日', '2023-10-10', '校级', '{"College": [], "Grade": ["大二"], "Club": []}', NULL, -1, NULL, 10, 10, '体育学院', 10, 1, 3, '无','https://img.pconline.com.cn/images/upload/upc/tx/photoblog/1811/25/c2/120888130_1543109554970_mthumb.jpg'),
+    (6, '志愿者招募', '招募各类志愿者参与学校各项活动。', '胡法光体育场', '2023年9月30日 - 2023年10月1日', '2023-10-03', '校级', '{"College": [], "Grade": [], "Club": []}', NULL, -1, NULL, 100, 100, '学生会', 8, 3, 3, '无',null),
+    (7, '运动会', '全校师生参与的体育比赛，包括各项田径、球类比赛。', '学校体育场', '2023年11月1日 - 2023年11月5日', '2023-10-25', '体育学院', '{"College": [], "Grade": [], "Club": []}', NULL, 1, NULL, 200, 200, '体育学院学生会', 4, 2, 3, '无',null),
+    (8, '春游活动', '学校举办的春季郊游活动，与同学们一起享受春天的美好。', '郊外风景区', '2023年3月15日 - 2023年3月25日', '2023-04-01', '校级', '{"College": [], "Grade": [], "Club": []}', NULL,-1, NULL, 200, 200, '学生会', 3, 0, 2, '无',null),
+    (9, '辩论赛', '各个学院之间的辩论比赛，展示辩论技巧和知识水平。', '学校演讲厅', '2023年5月1日 - 2023年5月5日', '2023-04-28', '校级', '{"College": [], "Grade": [], "Club": []}', NULL,-1, NULL, 50, 50, '学生会', 5, 2, 2, '无',null),
+    (10, '艺术展览', '学校举办的艺术作品展览，展示学生的艺术才华。', '学校艺术展览馆', '2023年6月1日 - 2023年6月10日', '2023-05-30', '校级', '{"College": [], "Grade": [], "Club": []}', NULL, 2, NULL, 100, 100, '学生会', 2, 0, 2, '无','https://img.zcool.cn/community/010ead5d2d9509a80120b5ab96ce78.jpg@3000w_1l_2o_100sh.jpg');
+DROP TABLE IF EXISTS `activity_signup`;
+CREATE TABLE activity_signup (
+                                 user_id INT,
+                                 act_id INT,
+#                       state ENUM('Signed','Passed','Rejected','Participated','Commented'),
+                                 state INT,
+                                 comment INT, # five stars, -1=not commented
+                                 comment_detail TEXT,
+                                 serial INT AUTO_INCREMENT PRIMARY KEY, # mark only key, make no sense
+                                 CONSTRAINT fk_signup1 FOREIGN KEY (user_id) REFERENCES userauth(user_id),
+                                 CONSTRAINT fk_signup2 FOREIGN KEY (act_id) REFERENCES activity_details(id)
+);
+INSERT INTO activity_signup (user_id, act_id, state, comment,comment_detail)
+VALUES (0, 2, 1,-1,null),
+       (0, 1, 2,-1,null),
+       (0, 4, 3,-1,null),
+       (0, 5, 5 ,2,'Not Bad');
+
+DROP TABLE IF EXISTS `activity_release`;
+CREATE TABLE activity_release (
+                                  user_id INT,
+                                  act_id INT,
+                                  serial INT AUTO_INCREMENT PRIMARY KEY, # mark only key, make no sense
+                                  CONSTRAINT fk_release1 FOREIGN KEY (user_id) REFERENCES userauth(user_id),
+                                  CONSTRAINT fk_release2 FOREIGN KEY (act_id) REFERENCES activity_details(id)
+);
+INSERT INTO activity_release (user_id, act_id)
+VALUES (0, 7);
+
+
+DROP TABLE IF EXISTS `moments`;
+
+CREATE TABLE moments (
+                         user_id INT,
+                         content TEXT, # url
+                         photo TEXT, # url
+                         post_time DATETIME,
+                         likes INT,
+                         comments TEXT, #url
+                         moment_id INT AUTO_INCREMENT ,
+                         is_deleted BOOLEAN,
+                         PRIMARY KEY (moment_id),
+                         CONSTRAINT fk_moments FOREIGN KEY (user_id) REFERENCES user(userId)
+);
+
+INSERT INTO moments (user_id, content, photo, post_time, likes, comments, is_deleted)
+VALUES (0, null,null,NOW(), 0, null, false);
+
